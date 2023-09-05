@@ -63,6 +63,7 @@ flutter:
     - assets/warning.png
     - assets/play.png
     - assets/right_arrow.png
+    - assets/sync.png
 
   fonts:
     - family: "ProximaNovaAlt"

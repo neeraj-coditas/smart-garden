@@ -1077,7 +1077,155 @@ class _GardenScreenState extends State<GardenScreen> {
                                                   ),
                                                 )
                                               ],
-                                            )
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                      vertical: 16),
+                                              child: Divider(
+                                                color: Colors.grey[300],
+                                              ),
+                                            ),
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              children: [
+                                                Row(
+                                                  children: [
+                                                    Image.asset(
+                                                        'assets/light.png'),
+                                                    const Padding(
+                                                      padding: EdgeInsets.only(
+                                                          left: 16),
+                                                      child: Text(
+                                                        'Plantlight Settings',
+                                                        style: TextStyle(
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    28,
+                                                                    97,
+                                                                    33),
+                                                            fontWeight:
+                                                                FontWeight.bold,
+                                                            fontSize: 16),
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
+                                                const Padding(
+                                                  padding:
+                                                      EdgeInsets.only(right: 0),
+                                                  child: Row(
+                                                    children: [
+                                                      Text('Currently ON'),
+                                                      Image(
+                                                          image: AssetImage(
+                                                              'assets/right_arrow.png'))
+                                                    ],
+                                                  ),
+                                                )
+                                              ],
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                      vertical: 16),
+                                              child: Divider(
+                                                color: Colors.grey[300],
+                                              ),
+                                            ),
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              children: [
+                                                Row(
+                                                  children: [
+                                                    Image.asset(
+                                                        'assets/plant.png'),
+                                                    const Padding(
+                                                      padding: EdgeInsets.only(
+                                                          left: 16),
+                                                      child: Text(
+                                                        'Cycle Settings',
+                                                        style: TextStyle(
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    28,
+                                                                    97,
+                                                                    33),
+                                                            fontWeight:
+                                                                FontWeight.bold,
+                                                            fontSize: 16),
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
+                                                const Padding(
+                                                  padding:
+                                                      EdgeInsets.only(right: 0),
+                                                  child: Row(
+                                                    children: [
+                                                      Image(
+                                                          image: AssetImage(
+                                                              'assets/right_arrow.png'))
+                                                    ],
+                                                  ),
+                                                )
+                                              ],
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                      vertical: 16),
+                                              child: Divider(
+                                                color: Colors.grey[300],
+                                              ),
+                                            ),
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              children: [
+                                                Row(
+                                                  children: [
+                                                    Image.asset(
+                                                        'assets/sync.png'),
+                                                    const Padding(
+                                                      padding: EdgeInsets.only(
+                                                          left: 16),
+                                                      child: Text(
+                                                        'Aepod Sync Settings',
+                                                        style: TextStyle(
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    28,
+                                                                    97,
+                                                                    33),
+                                                            fontWeight:
+                                                                FontWeight.bold,
+                                                            fontSize: 16),
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
+                                                const Padding(
+                                                  padding:
+                                                      EdgeInsets.only(right: 0),
+                                                  child: Row(
+                                                    children: [
+                                                      Image(
+                                                          image: AssetImage(
+                                                              'assets/right_arrow.png'))
+                                                    ],
+                                                  ),
+                                                )
+                                              ],
+                                            ),
                                           ],
                                         ),
                                       ),
