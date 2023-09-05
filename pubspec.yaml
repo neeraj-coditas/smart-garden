@@ -1,0 +1,76 @@
+name: smart_garden
+description: A new Flutter project.
+publish_to: "none"
+version: 0.1.0
+
+environment:
+  sdk: ">=3.0.6 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/AEPOD.png
+    - assets/logo.png
+    - assets/lock.png
+    - assets/email.png
+    - assets/eye.png
+    - assets/facebook.png
+    - assets/google_logo.png
+    - assets/profile.png
+    - assets/check.png
+    - assets/add_pod.png
+    - assets/garden1.png
+    - assets/garden2.png
+    - assets/garden3.png
+    - assets/settings.png
+    - assets/settings_bg.png
+    - assets/logo_green.png
+    - assets/menu.png
+    - assets/profile_grey.png
+    - assets/plant.png
+    - assets/timer.png
+    - assets/wifi.png
+    - assets/sapling.png
+    - assets/weight.png
+    - assets/humidity.png
+    - assets/water.png
+    - assets/temperature.png
+    - assets/light.png
+    - assets/next_arrow.png
+    - assets/garden2_source.png
+    - assets/back_arrow.png
+    - assets/three_dot_menu.png
+    - assets/sapling_2.png
+    - assets/basil.png
+    - assets/mint.png
+    - assets/lemon_balm.png
+    - assets/oregano.png
+    - assets/info.png
+    - assets/verified.png
+    - assets/prev.png
+    - assets/next.png
+    - assets/dropdown.png
+    - assets/warning.png
+    - assets/play.png
+    - assets/right_arrow.png
+
+  fonts:
+    - family: "ProximaNovaAlt"
+      fonts:
+        - asset: fonts/ProximaNovaAlt-Regular.ttf
+        - asset: fonts/ProximaNovaAlt-Bold.ttf
+
+    - family: "NoeDisplay"
+      fonts:
+        - asset: fonts/NoeDisplay-Regular.ttf
+        - asset: fonts/NoeDisplay-Bold.ttf
