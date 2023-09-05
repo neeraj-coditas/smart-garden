@@ -62,7 +62,7 @@ class _ShopScreenState extends State<ShopScreen> {
     'Ayurvedic'
   ];
 
-  final int _tabSelected = 0;
+  int _tabSelected = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -84,20 +84,26 @@ class _ShopScreenState extends State<ShopScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Row(
-                      children: [
-                        const Image(image: AssetImage('assets/back_arrow.png')),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 8),
-                          child: Text(
-                            'Go Back',
-                            style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.green[900],
-                                fontWeight: FontWeight.bold),
-                          ),
-                        )
-                      ],
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).pop();
+                      },
+                      child: Row(
+                        children: [
+                          const Image(
+                              image: AssetImage('assets/back_arrow.png')),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8),
+                            child: Text(
+                              'Go Back',
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  color: Colors.green[900],
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                     Container(
                         decoration: const BoxDecoration(
@@ -359,28 +365,35 @@ class _ShopScreenState extends State<ShopScreen> {
                       String title = listOfStrings[index];
                       return Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 8),
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: _tabSelected == index
-                                  ? const Color.fromARGB(255, 58, 206, 172)
-                                  : Colors.white,
-                              borderRadius: BorderRadius.circular(30)),
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 16, vertical: 12),
-                            child: Align(
-                                alignment: Alignment.center,
-                                child: Text(
-                                  title,
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      color: _tabSelected == index
-                                          ? Colors.white
-                                          : const Color.fromARGB(
-                                              255, 58, 206, 172),
-                                      fontWeight: FontWeight.bold),
-                                )),
+                        child: GestureDetector(
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: _tabSelected == index
+                                    ? const Color.fromARGB(255, 58, 206, 172)
+                                    : Colors.white,
+                                borderRadius: BorderRadius.circular(30)),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 16, vertical: 12),
+                              child: Align(
+                                  alignment: Alignment.center,
+                                  child: Text(
+                                    title,
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        color: _tabSelected == index
+                                            ? Colors.white
+                                            : const Color.fromARGB(
+                                                255, 58, 206, 172),
+                                        fontWeight: FontWeight.bold),
+                                  )),
+                            ),
                           ),
+                          onTap: () {
+                            setState(() {
+                              _tabSelected = index;
+                            });
+                          },
                         ),
                       );
                     },
