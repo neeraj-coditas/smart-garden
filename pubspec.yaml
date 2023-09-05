@@ -64,6 +64,12 @@ flutter:
     - assets/play.png
     - assets/right_arrow.png
     - assets/sync.png
+    - assets/profile_green.png
+    - assets/logo_disabled.png
+    - assets/edit.png
+    - assets/cart.png
+    - assets/cart_2.png
+    - assets/fav.png
 
   fonts:
     - family: "ProximaNovaAlt"
