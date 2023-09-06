@@ -69,8 +69,6 @@ class _GardenScreenState extends State<GardenScreen> {
     return menuItems;
   }
 
-  final String _selectedValue = "USA";
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -391,286 +389,315 @@ class _GardenScreenState extends State<GardenScreen> {
                                           ],
                                         ),
                                         onTap: () {
+                                          _selectedPlantPosition = index;
                                           showModalBottomSheet(
                                             isScrollControlled: true,
                                             context: context,
                                             builder: (context) {
-                                              return Wrap(
-                                                children: [
-                                                  Column(
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .center,
+                                              return StatefulBuilder(
+                                                builder: (context, setState) {
+                                                  return Wrap(
                                                     children: [
-                                                      Row(
-                                                        crossAxisAlignment:
-                                                            CrossAxisAlignment
-                                                                .center,
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .center,
-                                                        children: [
-                                                          Padding(
-                                                            padding:
-                                                                const EdgeInsets
-                                                                        .only(
-                                                                    top: 12),
-                                                            child: Container(
-                                                              alignment:
-                                                                  Alignment
+                                                      Container(
+                                                        decoration: const BoxDecoration(
+                                                            color: Colors.white,
+                                                            borderRadius: BorderRadius.only(
+                                                                topLeft: Radius
+                                                                    .circular(
+                                                                        24),
+                                                                topRight: Radius
+                                                                    .circular(
+                                                                        24))),
+                                                        child: Column(
+                                                          crossAxisAlignment:
+                                                              CrossAxisAlignment
+                                                                  .center,
+                                                          children: [
+                                                            Row(
+                                                              crossAxisAlignment:
+                                                                  CrossAxisAlignment
                                                                       .center,
-                                                              height: 8,
-                                                              width: 48,
-                                                              decoration: const BoxDecoration(
-                                                                  borderRadius:
-                                                                      BorderRadius.all(
-                                                                          Radius.circular(
-                                                                              8)),
-                                                                  color: Colors
-                                                                      .grey),
-                                                            ),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                    .symmetric(
-                                                                vertical: 20),
-                                                        child: SizedBox(
-                                                          height: 120,
-                                                          child:
-                                                              PageView.builder(
-                                                            controller: _pageController =
-                                                                PageController(
-                                                                    initialPage:
-                                                                        index,
-                                                                    viewportFraction:
-                                                                        0.5),
-                                                            onPageChanged:
-                                                                (value) {
-                                                              setState(() {
-                                                                _selectedPlantPosition =
-                                                                    value;
-                                                              });
-                                                            },
-                                                            itemCount: plantList
-                                                                .length,
-                                                            itemBuilder:
-                                                                (context,
-                                                                    pageIndex) {
-                                                              return FractionallySizedBox(
-                                                                heightFactor:
-                                                                    pageIndex ==
-                                                                            index
-                                                                        ? 1
-                                                                        : 0.6,
-                                                                child: Image(
-                                                                  image: AssetImage(
-                                                                      plantList[
-                                                                              pageIndex]
-                                                                          .plantPicture),
-                                                                  fit: BoxFit
-                                                                      .fitHeight,
+                                                              mainAxisAlignment:
+                                                                  MainAxisAlignment
+                                                                      .center,
+                                                              children: [
+                                                                Padding(
+                                                                  padding: const EdgeInsets
+                                                                          .only(
+                                                                      top: 12),
+                                                                  child:
+                                                                      Container(
+                                                                    alignment:
+                                                                        Alignment
+                                                                            .center,
+                                                                    height: 8,
+                                                                    width: 48,
+                                                                    decoration: const BoxDecoration(
+                                                                        borderRadius:
+                                                                            BorderRadius.all(Radius.circular(
+                                                                                8)),
+                                                                        color: Colors
+                                                                            .grey),
+                                                                  ),
                                                                 ),
-                                                              );
-                                                            },
-                                                          ),
-                                                        ),
-                                                      ),
-                                                      Row(
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .spaceEvenly,
-                                                        children: [
-                                                          GestureDetector(
-                                                            onTap: () {
-                                                              _pageController.previousPage(
-                                                                  duration: const Duration(
-                                                                      milliseconds:
-                                                                          30),
-                                                                  curve: Curves
-                                                                      .ease);
-                                                            },
-                                                            child: Image.asset(
-                                                                'assets/prev.png'),
-                                                          ),
-                                                          Padding(
-                                                            padding:
-                                                                const EdgeInsets
-                                                                        .only(
-                                                                    top: 8),
-                                                            child: Text(
-                                                              plantList[index]
-                                                                  .plantName,
-                                                              style: const TextStyle(
-                                                                  fontSize: 32,
-                                                                  fontFamily:
-                                                                      'NoeDisplay',
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .bold),
+                                                              ],
                                                             ),
-                                                          ),
-                                                          GestureDetector(
-                                                            onTap: () {
-                                                              _pageController.nextPage(
-                                                                  duration: const Duration(
-                                                                      milliseconds:
-                                                                          30),
-                                                                  curve: Curves
-                                                                      .ease);
-                                                            },
-                                                            child: Image.asset(
-                                                                'assets/next.png'),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .only(top: 4),
-                                                        child: Text(
-                                                          plantList[index]
-                                                              .plantType,
-                                                          style: TextStyle(
-                                                              fontSize: 21,
-                                                              color: Colors
-                                                                  .green[800],
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold),
-                                                        ),
-                                                      ),
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .only(top: 16),
-                                                        child: Text(
-                                                          plantList[index]
-                                                              .plantHint,
-                                                          style: TextStyle(
-                                                              fontSize: 16,
-                                                              color: Colors
-                                                                  .green[900],
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold),
-                                                        ),
-                                                      ),
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .only(top: 8),
-                                                        child: Text(
-                                                          plantList[index]
-                                                              .plantHistory,
-                                                          style: const TextStyle(
-                                                              fontSize: 16,
-                                                              color: Color
-                                                                  .fromARGB(
-                                                                      255,
-                                                                      98,
-                                                                      151,
-                                                                      101),
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold),
-                                                        ),
-                                                      ),
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                    .symmetric(
-                                                                vertical: 24),
-                                                        child: Container(
-                                                          decoration: BoxDecoration(
-                                                              borderRadius:
-                                                                  BorderRadius
-                                                                      .circular(
-                                                                          12)),
-                                                          child: const Padding(
-                                                            padding:
-                                                                EdgeInsets.all(
-                                                                    16),
-                                                            child: Material(
-                                                              elevation: 2,
-                                                              borderRadius: BorderRadius
-                                                                  .all(Radius
-                                                                      .circular(
-                                                                          12)),
+                                                            Padding(
+                                                              padding:
+                                                                  const EdgeInsets
+                                                                          .symmetric(
+                                                                      vertical:
+                                                                          20),
                                                               child: SizedBox(
-                                                                width: 250,
-                                                                child: Row(
-                                                                  mainAxisAlignment:
-                                                                      MainAxisAlignment
-                                                                          .center,
-                                                                  children: [
-                                                                    Padding(
-                                                                      padding: EdgeInsets.symmetric(
-                                                                          vertical:
-                                                                              16),
+                                                                height: 120,
+                                                                child: PageView
+                                                                    .builder(
+                                                                  controller: _pageController = PageController(
+                                                                      initialPage:
+                                                                          index,
+                                                                      viewportFraction:
+                                                                          0.5),
+                                                                  onPageChanged:
+                                                                      (value) {
+                                                                    setState(
+                                                                        () {
+                                                                      _selectedPlantPosition =
+                                                                          value;
+                                                                    });
+                                                                  },
+                                                                  itemCount:
+                                                                      plantList
+                                                                          .length,
+                                                                  itemBuilder:
+                                                                      (context,
+                                                                          pageIndex) {
+                                                                    return FractionallySizedBox(
+                                                                      heightFactor: pageIndex ==
+                                                                              _selectedPlantPosition
+                                                                          ? 1.0
+                                                                          : 0.6,
                                                                       child:
                                                                           Image(
                                                                         image: AssetImage(
-                                                                            'assets/temperature.png'),
+                                                                            plantList[pageIndex].plantPicture),
+                                                                        fit: BoxFit
+                                                                            .fitHeight,
                                                                       ),
-                                                                    ),
-                                                                    Padding(
-                                                                      padding:
-                                                                          EdgeInsets.all(
-                                                                              8.0),
-                                                                      child: Text(
-                                                                          '23°C'),
-                                                                    ),
-                                                                    Image(
-                                                                        image: AssetImage(
-                                                                            'assets/verified.png')),
-                                                                    VerticalDivider(
-                                                                      color: Colors
-                                                                          .black,
-                                                                      thickness:
-                                                                          2,
-                                                                    ),
-                                                                    Image(
-                                                                        image: AssetImage(
-                                                                            'assets/water.png')),
-                                                                    Padding(
-                                                                      padding:
-                                                                          EdgeInsets.all(
-                                                                              8.0),
-                                                                      child: Text(
-                                                                          '85%'),
-                                                                    ),
-                                                                    Image(
-                                                                        image: AssetImage(
-                                                                            'assets/verified.png')),
-                                                                  ],
+                                                                    );
+                                                                  },
                                                                 ),
                                                               ),
                                                             ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                    .only(
-                                                                bottom: 28),
-                                                        child: Text(
-                                                          "See growing tips",
-                                                          style: TextStyle(
-                                                              fontSize: 21,
-                                                              color: Colors
-                                                                  .green[800],
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold),
+                                                            Row(
+                                                              mainAxisAlignment:
+                                                                  MainAxisAlignment
+                                                                      .spaceEvenly,
+                                                              children: [
+                                                                GestureDetector(
+                                                                  onTap: () {
+                                                                    _pageController.previousPage(
+                                                                        duration: const Duration(
+                                                                            milliseconds:
+                                                                                30),
+                                                                        curve: Curves
+                                                                            .ease);
+                                                                  },
+                                                                  child: Image
+                                                                      .asset(
+                                                                          'assets/prev.png'),
+                                                                ),
+                                                                Padding(
+                                                                  padding: const EdgeInsets
+                                                                          .only(
+                                                                      top: 8),
+                                                                  child: Text(
+                                                                    plantList[
+                                                                            _selectedPlantPosition]
+                                                                        .plantName,
+                                                                    style: const TextStyle(
+                                                                        fontSize:
+                                                                            32,
+                                                                        fontFamily:
+                                                                            'NoeDisplay',
+                                                                        fontWeight:
+                                                                            FontWeight.bold),
+                                                                  ),
+                                                                ),
+                                                                GestureDetector(
+                                                                  onTap: () {
+                                                                    _pageController.nextPage(
+                                                                        duration: const Duration(
+                                                                            milliseconds:
+                                                                                30),
+                                                                        curve: Curves
+                                                                            .ease);
+                                                                  },
+                                                                  child: Image
+                                                                      .asset(
+                                                                          'assets/next.png'),
+                                                                ),
+                                                              ],
+                                                            ),
+                                                            Padding(
+                                                              padding:
+                                                                  const EdgeInsets
+                                                                          .only(
+                                                                      top: 4),
+                                                              child: Text(
+                                                                plantList[
+                                                                        _selectedPlantPosition]
+                                                                    .plantType,
+                                                                style: TextStyle(
+                                                                    fontSize:
+                                                                        21,
+                                                                    color: Colors
+                                                                            .green[
+                                                                        800],
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .bold),
+                                                              ),
+                                                            ),
+                                                            Padding(
+                                                              padding:
+                                                                  const EdgeInsets
+                                                                          .only(
+                                                                      top: 16),
+                                                              child: Text(
+                                                                plantList[
+                                                                        _selectedPlantPosition]
+                                                                    .plantHint,
+                                                                style: TextStyle(
+                                                                    fontSize:
+                                                                        16,
+                                                                    color: Colors
+                                                                            .green[
+                                                                        900],
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .bold),
+                                                              ),
+                                                            ),
+                                                            Padding(
+                                                              padding:
+                                                                  const EdgeInsets
+                                                                          .only(
+                                                                      top: 8),
+                                                              child: Text(
+                                                                plantList[
+                                                                        _selectedPlantPosition]
+                                                                    .plantHistory,
+                                                                style: const TextStyle(
+                                                                    fontSize:
+                                                                        16,
+                                                                    color: Color
+                                                                        .fromARGB(
+                                                                            255,
+                                                                            98,
+                                                                            151,
+                                                                            101),
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .bold),
+                                                              ),
+                                                            ),
+                                                            Padding(
+                                                              padding:
+                                                                  const EdgeInsets
+                                                                          .symmetric(
+                                                                      vertical:
+                                                                          24),
+                                                              child: Container(
+                                                                decoration: BoxDecoration(
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            12)),
+                                                                child:
+                                                                    const Padding(
+                                                                  padding:
+                                                                      EdgeInsets
+                                                                          .all(
+                                                                              16),
+                                                                  child:
+                                                                      Material(
+                                                                    elevation:
+                                                                        2,
+                                                                    borderRadius:
+                                                                        BorderRadius.all(
+                                                                            Radius.circular(12)),
+                                                                    child:
+                                                                        SizedBox(
+                                                                      width:
+                                                                          250,
+                                                                      child:
+                                                                          Row(
+                                                                        mainAxisAlignment:
+                                                                            MainAxisAlignment.center,
+                                                                        children: [
+                                                                          Padding(
+                                                                            padding:
+                                                                                EdgeInsets.symmetric(vertical: 16),
+                                                                            child:
+                                                                                Image(
+                                                                              image: AssetImage('assets/temperature.png'),
+                                                                            ),
+                                                                          ),
+                                                                          Padding(
+                                                                            padding:
+                                                                                EdgeInsets.all(8.0),
+                                                                            child:
+                                                                                Text('23°C'),
+                                                                          ),
+                                                                          Image(
+                                                                              image: AssetImage('assets/verified.png')),
+                                                                          VerticalDivider(
+                                                                            color:
+                                                                                Colors.black,
+                                                                            thickness:
+                                                                                2,
+                                                                          ),
+                                                                          Image(
+                                                                              image: AssetImage('assets/water.png')),
+                                                                          Padding(
+                                                                            padding:
+                                                                                EdgeInsets.all(8.0),
+                                                                            child:
+                                                                                Text('85%'),
+                                                                          ),
+                                                                          Image(
+                                                                              image: AssetImage('assets/verified.png')),
+                                                                        ],
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                            ),
+                                                            Padding(
+                                                              padding:
+                                                                  const EdgeInsets
+                                                                          .only(
+                                                                      bottom:
+                                                                          28),
+                                                              child: Text(
+                                                                "See growing tips",
+                                                                style: TextStyle(
+                                                                    fontSize:
+                                                                        21,
+                                                                    color: Colors
+                                                                            .green[
+                                                                        800],
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .bold),
+                                                              ),
+                                                            ),
+                                                          ],
                                                         ),
                                                       ),
                                                     ],
-                                                  ),
-                                                ],
+                                                  );
+                                                },
                                               );
                                             },
                                           );

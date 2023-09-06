@@ -190,583 +190,608 @@ class _ShopScreenState extends State<ShopScreen> {
                                             crossAxisAlignment:
                                                 WrapCrossAlignment.center,
                                             children: [
-                                              Column(
-                                                children: [
-                                                  Row(
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .center,
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .center,
-                                                    children: [
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .only(top: 12),
-                                                        child: Container(
-                                                          alignment:
-                                                              Alignment.center,
-                                                          height: 8,
-                                                          width: 80,
-                                                          decoration: const BoxDecoration(
-                                                              borderRadius:
-                                                                  BorderRadius
-                                                                      .all(Radius
-                                                                          .circular(
-                                                                              8)),
-                                                              color:
-                                                                  Colors.grey),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                  const SizedBox(
-                                                    height: 40,
-                                                  ),
-                                                  SizedBox(
-                                                    height: 120,
-                                                    width: 120,
-                                                    child: Image(
-                                                        image: AssetImage(
-                                                            plantData
-                                                                .plantPicture)),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                        const EdgeInsets.only(
-                                                            top: 32),
-                                                    child: Text(
-                                                      plantData.plantName,
-                                                      style: const TextStyle(
-                                                          fontSize: 32,
-                                                          fontFamily:
-                                                              'NoeDisplay',
-                                                          fontWeight:
-                                                              FontWeight.bold),
-                                                    ),
-                                                  ),
-                                                  Row(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .center,
-                                                    children: [
-                                                      Text(
-                                                        '${plantData.plantType}   |',
-                                                        style: TextStyle(
-                                                            fontWeight:
-                                                                FontWeight.bold,
-                                                            color: Colors
-                                                                .green[900],
-                                                            fontSize: 21),
-                                                      ),
-                                                      Text(
-                                                        '   \$20',
-                                                        style: TextStyle(
-                                                            color: Colors
-                                                                .green[800],
-                                                            fontSize: 21,
-                                                            fontWeight:
-                                                                FontWeight
-                                                                    .bold),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                  const SizedBox(height: 24),
-                                                  const Padding(
-                                                    padding:
-                                                        EdgeInsets.symmetric(
-                                                            horizontal: 32),
-                                                    child: Text(
-                                                      'Lemon Balm is a 50cm to 80cm high perennial herb with a four-edged, branching, sparsely-haired stalk.',
-                                                      style: TextStyle(
-                                                          fontSize: 14),
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                        const EdgeInsets.only(
-                                                            top: 24,
-                                                            bottom: 32),
-                                                    child: GestureDetector(
-                                                      onTap: () {
-                                                        setModalState(() {
-                                                          _isExpanded = true;
-                                                        });
-                                                      },
-                                                      child: Text(
-                                                        'Read More',
-                                                        style: TextStyle(
-                                                            color: Colors
-                                                                .green[800],
-                                                            fontSize: 18,
-                                                            fontWeight:
-                                                                FontWeight
-                                                                    .bold),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                        const EdgeInsets.only(
-                                                            left: 24,
-                                                            right: 24,
-                                                            bottom: 56),
-                                                    child: Row(
+                                              Container(
+                                                decoration: const BoxDecoration(
+                                                    color: Colors.white,
+                                                    borderRadius:
+                                                        BorderRadius.only(
+                                                            topLeft: Radius
+                                                                .circular(24),
+                                                            topRight:
+                                                                Radius.circular(
+                                                                    24))),
+                                                child: Column(
+                                                  children: [
+                                                    Row(
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .center,
                                                       mainAxisAlignment:
                                                           MainAxisAlignment
-                                                              .spaceBetween,
+                                                              .center,
                                                       children: [
-                                                        Container(
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            border: Border.all(
-                                                                color: const Color
-                                                                        .fromRGBO(
-                                                                    46,
-                                                                    125,
-                                                                    50,
-                                                                    1)),
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        4),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  top: 12),
+                                                          child: Container(
+                                                            alignment: Alignment
+                                                                .center,
+                                                            height: 8,
+                                                            width: 80,
+                                                            decoration: const BoxDecoration(
+                                                                borderRadius: BorderRadius
+                                                                    .all(Radius
+                                                                        .circular(
+                                                                            8)),
+                                                                color: Colors
+                                                                    .grey),
                                                           ),
-                                                          child: Padding(
+                                                        ),
+                                                      ],
+                                                    ),
+                                                    const SizedBox(
+                                                      height: 40,
+                                                    ),
+                                                    SizedBox(
+                                                      height: 120,
+                                                      width: 120,
+                                                      child: Image(
+                                                          image: AssetImage(
+                                                              plantData
+                                                                  .plantPicture)),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              top: 32),
+                                                      child: Text(
+                                                        plantData.plantName,
+                                                        style: const TextStyle(
+                                                            fontSize: 32,
+                                                            fontFamily:
+                                                                'NoeDisplay',
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .bold),
+                                                      ),
+                                                    ),
+                                                    Row(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .center,
+                                                      children: [
+                                                        Text(
+                                                          '${plantData.plantType}   |',
+                                                          style: TextStyle(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold,
+                                                              color: Colors
+                                                                  .green[900],
+                                                              fontSize: 21),
+                                                        ),
+                                                        Text(
+                                                          '   \$20',
+                                                          style: TextStyle(
+                                                              color: Colors
+                                                                  .green[800],
+                                                              fontSize: 21,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                    const SizedBox(height: 24),
+                                                    const Padding(
+                                                      padding:
+                                                          EdgeInsets.symmetric(
+                                                              horizontal: 32),
+                                                      child: Text(
+                                                        'Lemon Balm is a 50cm to 80cm high perennial herb with a four-edged, branching, sparsely-haired stalk.',
+                                                        style: TextStyle(
+                                                            fontSize: 14),
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              top: 24,
+                                                              bottom: 32),
+                                                      child: GestureDetector(
+                                                        onTap: () {
+                                                          setModalState(() {
+                                                            _isExpanded = true;
+                                                          });
+                                                        },
+                                                        child: Text(
+                                                          'Read More',
+                                                          style: TextStyle(
+                                                              color: Colors
+                                                                  .green[800],
+                                                              fontSize: 18,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              left: 24,
+                                                              right: 24,
+                                                              bottom: 56),
+                                                      child: Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .spaceBetween,
+                                                        children: [
+                                                          Container(
+                                                            decoration:
+                                                                BoxDecoration(
+                                                              border: Border.all(
+                                                                  color: const Color
+                                                                          .fromRGBO(
+                                                                      46,
+                                                                      125,
+                                                                      50,
+                                                                      1)),
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          4),
+                                                            ),
+                                                            child: Padding(
+                                                              padding: const EdgeInsets
+                                                                      .symmetric(
+                                                                  horizontal:
+                                                                      20,
+                                                                  vertical: 14),
+                                                              child: Image.asset(
+                                                                  'assets/fav.png'),
+                                                            ),
+                                                          ),
+                                                          Padding(
                                                             padding:
                                                                 const EdgeInsets
+                                                                    .symmetric(
+                                                              horizontal: 0,
+                                                            ),
+                                                            child: Container(
+                                                              width: MediaQuery.of(
+                                                                          context)
+                                                                      .size
+                                                                      .width *
+                                                                  0.6,
+                                                              decoration:
+                                                                  BoxDecoration(
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .circular(
+                                                                            4),
+                                                                color: Colors
+                                                                    .green[800],
+                                                              ),
+                                                              child:
+                                                                  const Padding(
+                                                                padding: EdgeInsets
+                                                                    .symmetric(
+                                                                        vertical:
+                                                                            16),
+                                                                child: Align(
+                                                                  alignment:
+                                                                      Alignment
+                                                                          .center,
+                                                                  child: Text(
+                                                                    'Add to Cart',
+                                                                    style: TextStyle(
+                                                                        color: Colors
+                                                                            .white,
+                                                                        fontSize:
+                                                                            18,
+                                                                        fontWeight:
+                                                                            FontWeight.bold),
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          )
+                                                        ],
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
+                                              )
+                                            ],
+                                          )
+                                        : Container(
+                                            decoration: const BoxDecoration(
+                                                color: Colors.white,
+                                                borderRadius: BorderRadius.only(
+                                                    topLeft:
+                                                        Radius.circular(24),
+                                                    topRight:
+                                                        Radius.circular(24))),
+                                            child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                          top: 48),
+                                                  child: SingleChildScrollView(
+                                                    child: Column(
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        Row(
+                                                          crossAxisAlignment:
+                                                              CrossAxisAlignment
+                                                                  .center,
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .center,
+                                                          children: [
+                                                            Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top:
+                                                                            12),
+                                                                child:
+                                                                    GestureDetector(
+                                                                  onTap: () {
+                                                                    setModalState(
+                                                                        () {
+                                                                      _isExpanded =
+                                                                          false;
+                                                                    });
+                                                                  },
+                                                                  child: const Image(
+                                                                      image: AssetImage(
+                                                                          'assets/bottom_sheet_minimize.png')),
+                                                                )),
+                                                          ],
+                                                        ),
+                                                        const SizedBox(
+                                                          height: 40,
+                                                        ),
+                                                        Row(
+                                                          crossAxisAlignment:
+                                                              CrossAxisAlignment
+                                                                  .start,
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .spaceBetween,
+                                                          children: [
+                                                            Padding(
+                                                              padding:
+                                                                  const EdgeInsets
+                                                                          .only(
+                                                                      left: 24),
+                                                              child: Column(
+                                                                crossAxisAlignment:
+                                                                    CrossAxisAlignment
+                                                                        .start,
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .start,
+                                                                children: [
+                                                                  Text(
+                                                                    plantData
+                                                                        .plantName,
+                                                                    style: const TextStyle(
+                                                                        fontSize:
+                                                                            32,
+                                                                        fontFamily:
+                                                                            'NoeDisplay',
+                                                                        fontWeight:
+                                                                            FontWeight.bold),
+                                                                  ),
+                                                                  Row(
+                                                                    children: [
+                                                                      Text(
+                                                                        '${plantData.plantType}   |',
+                                                                        style: TextStyle(
+                                                                            fontWeight:
+                                                                                FontWeight.bold,
+                                                                            color: Colors.green[900],
+                                                                            fontSize: 21),
+                                                                      ),
+                                                                      Text(
+                                                                        '   \$20',
+                                                                        style: TextStyle(
+                                                                            color: Colors.green[
+                                                                                800],
+                                                                            fontSize:
+                                                                                21,
+                                                                            fontWeight:
+                                                                                FontWeight.bold),
+                                                                      ),
+                                                                    ],
+                                                                  ),
+                                                                  const Padding(
+                                                                    padding: EdgeInsets
+                                                                        .only(
+                                                                            top:
+                                                                                16.0),
+                                                                    child: Text(
+                                                                      '121 people are growing this 🌿',
+                                                                      style: TextStyle(
+                                                                          fontSize:
+                                                                              14),
+                                                                    ),
+                                                                  )
+                                                                ],
+                                                              ),
+                                                            ),
+                                                            Padding(
+                                                              padding:
+                                                                  const EdgeInsets
+                                                                          .only(
+                                                                      right:
+                                                                          24),
+                                                              child: SizedBox(
+                                                                height: 120,
+                                                                width: 120,
+                                                                child: Image(
+                                                                    image: AssetImage(
+                                                                        plantData
+                                                                            .plantPicture)),
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        ),
+                                                        const SizedBox(
+                                                            height: 28),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  left: 24,
+                                                                  right: 24,
+                                                                  bottom: 32),
+                                                          child: Row(
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .spaceBetween,
+                                                            children: [
+                                                              Container(
+                                                                decoration:
+                                                                    BoxDecoration(
+                                                                  border: Border.all(
+                                                                      color: const Color
+                                                                              .fromRGBO(
+                                                                          46,
+                                                                          125,
+                                                                          50,
+                                                                          1)),
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              4),
+                                                                ),
+                                                                child: Padding(
+                                                                  padding: const EdgeInsets
+                                                                          .symmetric(
+                                                                      horizontal:
+                                                                          20,
+                                                                      vertical:
+                                                                          14),
+                                                                  child: Image
+                                                                      .asset(
+                                                                          'assets/fav.png'),
+                                                                ),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
                                                                         .symmetric(
-                                                                    horizontal:
-                                                                        20,
-                                                                    vertical:
-                                                                        14),
-                                                            child: Image.asset(
-                                                                'assets/fav.png'),
+                                                                  horizontal: 0,
+                                                                ),
+                                                                child:
+                                                                    Container(
+                                                                  width: MediaQuery.of(
+                                                                              context)
+                                                                          .size
+                                                                          .width *
+                                                                      0.6,
+                                                                  decoration:
+                                                                      BoxDecoration(
+                                                                    borderRadius:
+                                                                        BorderRadius
+                                                                            .circular(4),
+                                                                    color: Colors
+                                                                            .green[
+                                                                        800],
+                                                                  ),
+                                                                  child:
+                                                                      const Padding(
+                                                                    padding: EdgeInsets.symmetric(
+                                                                        vertical:
+                                                                            16),
+                                                                    child:
+                                                                        Align(
+                                                                      alignment:
+                                                                          Alignment
+                                                                              .center,
+                                                                      child:
+                                                                          Text(
+                                                                        'Add to Cart',
+                                                                        style: TextStyle(
+                                                                            color: Colors
+                                                                                .white,
+                                                                            fontSize:
+                                                                                18,
+                                                                            fontWeight:
+                                                                                FontWeight.bold),
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                              )
+                                                            ],
+                                                          ),
+                                                        ),
+                                                        const Padding(
+                                                          padding:
+                                                              EdgeInsets.only(
+                                                                  bottom: 16,
+                                                                  left: 24),
+                                                          child: Text(
+                                                            'Description',
+                                                            style: TextStyle(
+                                                                fontSize: 16,
+                                                                color: Color
+                                                                    .fromARGB(
+                                                                        255,
+                                                                        169,
+                                                                        196,
+                                                                        170),
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
+                                                          ),
+                                                        ),
+                                                        const Padding(
+                                                          padding: EdgeInsets
+                                                              .symmetric(
+                                                                  horizontal:
+                                                                      24),
+                                                          child: Text(
+                                                            'Lemon Balm is a 50cm to 80cm high perennial herb with a four-edged, branching, sparsely-haired stalk. The opposed leaves, whose stalked stems vary in length, are broadly oval to heart-shaped and have an irregular crenate (rounded teeth) or serrate (small, sharp teeth) edge.',
+                                                            style: TextStyle(
+                                                                fontSize: 14),
+                                                          ),
+                                                        ),
+                                                        const Padding(
+                                                          padding:
+                                                              EdgeInsets.only(
+                                                                  bottom: 16,
+                                                                  left: 24,
+                                                                  top: 24),
+                                                          child: Text(
+                                                            'Growing information',
+                                                            style: TextStyle(
+                                                                fontSize: 16,
+                                                                color: Color
+                                                                    .fromARGB(
+                                                                        255,
+                                                                        169,
+                                                                        196,
+                                                                        170),
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
                                                           ),
                                                         ),
                                                         Padding(
                                                           padding:
                                                               const EdgeInsets
-                                                                  .symmetric(
-                                                            horizontal: 0,
-                                                          ),
-                                                          child: Container(
-                                                            width: MediaQuery.of(
-                                                                        context)
-                                                                    .size
-                                                                    .width *
-                                                                0.6,
-                                                            decoration:
-                                                                BoxDecoration(
-                                                              borderRadius:
-                                                                  BorderRadius
-                                                                      .circular(
-                                                                          4),
-                                                              color: Colors
-                                                                  .green[800],
-                                                            ),
-                                                            child:
-                                                                const Padding(
-                                                              padding: EdgeInsets
-                                                                  .symmetric(
-                                                                      vertical:
-                                                                          16),
-                                                              child: Align(
-                                                                alignment:
-                                                                    Alignment
-                                                                        .center,
+                                                                      .only(
+                                                                  left: 24,
+                                                                  top: 16),
+                                                          child: Row(
+                                                            children: [
+                                                              Image.asset(
+                                                                  'assets/temperature.png'),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        left:
+                                                                            12),
                                                                 child: Text(
-                                                                  'Add to Cart',
+                                                                  'Room temparature is fine',
                                                                   style: TextStyle(
                                                                       color: Colors
-                                                                          .white,
+                                                                              .green[
+                                                                          900],
                                                                       fontSize:
-                                                                          18,
+                                                                          16,
                                                                       fontWeight:
                                                                           FontWeight
                                                                               .bold),
                                                                 ),
-                                                              ),
-                                                            ),
+                                                              )
+                                                            ],
                                                           ),
-                                                        )
+                                                        ),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  left: 24,
+                                                                  top: 16),
+                                                          child: Row(
+                                                            children: [
+                                                              Image.asset(
+                                                                  'assets/water.png'),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        left:
+                                                                            12),
+                                                                child: Text(
+                                                                  'Regular watering works best',
+                                                                  style: TextStyle(
+                                                                      color: Colors
+                                                                              .green[
+                                                                          900],
+                                                                      fontSize:
+                                                                          16,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .bold),
+                                                                ),
+                                                              )
+                                                            ],
+                                                          ),
+                                                        ),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  left: 24,
+                                                                  top: 16),
+                                                          child: Row(
+                                                            children: [
+                                                              Image.asset(
+                                                                  'assets/plant.png'),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        left:
+                                                                            12),
+                                                                child: Text(
+                                                                  'Typically ready for harvest after 4 weeks',
+                                                                  style: TextStyle(
+                                                                      color: Colors
+                                                                              .green[
+                                                                          900],
+                                                                      fontSize:
+                                                                          16,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .bold),
+                                                                ),
+                                                              )
+                                                            ],
+                                                          ),
+                                                        ),
                                                       ],
                                                     ),
-                                                  )
-                                                ],
-                                              )
-                                            ],
-                                          )
-                                        : Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              Padding(
-                                                padding: const EdgeInsets.only(
-                                                    top: 48),
-                                                child: SingleChildScrollView(
-                                                  child: Column(
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    children: [
-                                                      Row(
-                                                        crossAxisAlignment:
-                                                            CrossAxisAlignment
-                                                                .center,
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .center,
-                                                        children: [
-                                                          Padding(
-                                                              padding:
-                                                                  const EdgeInsets
-                                                                          .only(
-                                                                      top: 12),
-                                                              child:
-                                                                  GestureDetector(
-                                                                onTap: () {
-                                                                  setModalState(
-                                                                      () {
-                                                                    _isExpanded =
-                                                                        false;
-                                                                  });
-                                                                },
-                                                                child: const Image(
-                                                                    image: AssetImage(
-                                                                        'assets/bottom_sheet_minimize.png')),
-                                                              )),
-                                                        ],
-                                                      ),
-                                                      const SizedBox(
-                                                        height: 40,
-                                                      ),
-                                                      Row(
-                                                        crossAxisAlignment:
-                                                            CrossAxisAlignment
-                                                                .start,
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .spaceBetween,
-                                                        children: [
-                                                          Padding(
-                                                            padding:
-                                                                const EdgeInsets
-                                                                        .only(
-                                                                    left: 24),
-                                                            child: Column(
-                                                              crossAxisAlignment:
-                                                                  CrossAxisAlignment
-                                                                      .start,
-                                                              mainAxisAlignment:
-                                                                  MainAxisAlignment
-                                                                      .start,
-                                                              children: [
-                                                                Text(
-                                                                  plantData
-                                                                      .plantName,
-                                                                  style: const TextStyle(
-                                                                      fontSize:
-                                                                          32,
-                                                                      fontFamily:
-                                                                          'NoeDisplay',
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .bold),
-                                                                ),
-                                                                Row(
-                                                                  children: [
-                                                                    Text(
-                                                                      '${plantData.plantType}   |',
-                                                                      style: TextStyle(
-                                                                          fontWeight: FontWeight
-                                                                              .bold,
-                                                                          color: Colors.green[
-                                                                              900],
-                                                                          fontSize:
-                                                                              21),
-                                                                    ),
-                                                                    Text(
-                                                                      '   \$20',
-                                                                      style: TextStyle(
-                                                                          color: Colors.green[
-                                                                              800],
-                                                                          fontSize:
-                                                                              21,
-                                                                          fontWeight:
-                                                                              FontWeight.bold),
-                                                                    ),
-                                                                  ],
-                                                                ),
-                                                                const Padding(
-                                                                  padding:
-                                                                      EdgeInsets
-                                                                          .only(
-                                                                              top: 16.0),
-                                                                  child: Text(
-                                                                    '121 people are growing this 🌿',
-                                                                    style: TextStyle(
-                                                                        fontSize:
-                                                                            14),
-                                                                  ),
-                                                                )
-                                                              ],
-                                                            ),
-                                                          ),
-                                                          Padding(
-                                                            padding:
-                                                                const EdgeInsets
-                                                                        .only(
-                                                                    right: 24),
-                                                            child: SizedBox(
-                                                              height: 120,
-                                                              width: 120,
-                                                              child: Image(
-                                                                  image: AssetImage(
-                                                                      plantData
-                                                                          .plantPicture)),
-                                                            ),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                      const SizedBox(
-                                                          height: 28),
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                    .only(
-                                                                left: 24,
-                                                                right: 24,
-                                                                bottom: 32),
-                                                        child: Row(
-                                                          mainAxisAlignment:
-                                                              MainAxisAlignment
-                                                                  .spaceBetween,
-                                                          children: [
-                                                            Container(
-                                                              decoration:
-                                                                  BoxDecoration(
-                                                                border: Border.all(
-                                                                    color: const Color
-                                                                            .fromRGBO(
-                                                                        46,
-                                                                        125,
-                                                                        50,
-                                                                        1)),
-                                                                borderRadius:
-                                                                    BorderRadius
-                                                                        .circular(
-                                                                            4),
-                                                              ),
-                                                              child: Padding(
-                                                                padding: const EdgeInsets
-                                                                        .symmetric(
-                                                                    horizontal:
-                                                                        20,
-                                                                    vertical:
-                                                                        14),
-                                                                child: Image.asset(
-                                                                    'assets/fav.png'),
-                                                              ),
-                                                            ),
-                                                            Padding(
-                                                              padding:
-                                                                  const EdgeInsets
-                                                                      .symmetric(
-                                                                horizontal: 0,
-                                                              ),
-                                                              child: Container(
-                                                                width: MediaQuery.of(
-                                                                            context)
-                                                                        .size
-                                                                        .width *
-                                                                    0.6,
-                                                                decoration:
-                                                                    BoxDecoration(
-                                                                  borderRadius:
-                                                                      BorderRadius
-                                                                          .circular(
-                                                                              4),
-                                                                  color: Colors
-                                                                          .green[
-                                                                      800],
-                                                                ),
-                                                                child:
-                                                                    const Padding(
-                                                                  padding: EdgeInsets
-                                                                      .symmetric(
-                                                                          vertical:
-                                                                              16),
-                                                                  child: Align(
-                                                                    alignment:
-                                                                        Alignment
-                                                                            .center,
-                                                                    child: Text(
-                                                                      'Add to Cart',
-                                                                      style: TextStyle(
-                                                                          color: Colors
-                                                                              .white,
-                                                                          fontSize:
-                                                                              18,
-                                                                          fontWeight:
-                                                                              FontWeight.bold),
-                                                                    ),
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                            )
-                                                          ],
-                                                        ),
-                                                      ),
-                                                      const Padding(
-                                                        padding:
-                                                            EdgeInsets.only(
-                                                                bottom: 16,
-                                                                left: 24),
-                                                        child: Text(
-                                                          'Description',
-                                                          style: TextStyle(
-                                                              fontSize: 16,
-                                                              color: Color
-                                                                  .fromARGB(
-                                                                      255,
-                                                                      169,
-                                                                      196,
-                                                                      170),
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold),
-                                                        ),
-                                                      ),
-                                                      const Padding(
-                                                        padding: EdgeInsets
-                                                            .symmetric(
-                                                                horizontal: 24),
-                                                        child: Text(
-                                                          'Lemon Balm is a 50cm to 80cm high perennial herb with a four-edged, branching, sparsely-haired stalk. The opposed leaves, whose stalked stems vary in length, are broadly oval to heart-shaped and have an irregular crenate (rounded teeth) or serrate (small, sharp teeth) edge.',
-                                                          style: TextStyle(
-                                                              fontSize: 14),
-                                                        ),
-                                                      ),
-                                                      const Padding(
-                                                        padding:
-                                                            EdgeInsets.only(
-                                                                bottom: 16,
-                                                                left: 24,
-                                                                top: 24),
-                                                        child: Text(
-                                                          'Growing information',
-                                                          style: TextStyle(
-                                                              fontSize: 16,
-                                                              color: Color
-                                                                  .fromARGB(
-                                                                      255,
-                                                                      169,
-                                                                      196,
-                                                                      170),
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold),
-                                                        ),
-                                                      ),
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                    .only(
-                                                                left: 24,
-                                                                top: 16),
-                                                        child: Row(
-                                                          children: [
-                                                            Image.asset(
-                                                                'assets/temperature.png'),
-                                                            Padding(
-                                                              padding:
-                                                                  const EdgeInsets
-                                                                          .only(
-                                                                      left: 12),
-                                                              child: Text(
-                                                                'Room temparature is fine',
-                                                                style: TextStyle(
-                                                                    color: Colors
-                                                                            .green[
-                                                                        900],
-                                                                    fontSize:
-                                                                        16,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .bold),
-                                                              ),
-                                                            )
-                                                          ],
-                                                        ),
-                                                      ),
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                    .only(
-                                                                left: 24,
-                                                                top: 16),
-                                                        child: Row(
-                                                          children: [
-                                                            Image.asset(
-                                                                'assets/water.png'),
-                                                            Padding(
-                                                              padding:
-                                                                  const EdgeInsets
-                                                                          .only(
-                                                                      left: 12),
-                                                              child: Text(
-                                                                'Regular watering works best',
-                                                                style: TextStyle(
-                                                                    color: Colors
-                                                                            .green[
-                                                                        900],
-                                                                    fontSize:
-                                                                        16,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .bold),
-                                                              ),
-                                                            )
-                                                          ],
-                                                        ),
-                                                      ),
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                    .only(
-                                                                left: 24,
-                                                                top: 16),
-                                                        child: Row(
-                                                          children: [
-                                                            Image.asset(
-                                                                'assets/plant.png'),
-                                                            Padding(
-                                                              padding:
-                                                                  const EdgeInsets
-                                                                          .only(
-                                                                      left: 12),
-                                                              child: Text(
-                                                                'Typically ready for harvest after 4 weeks',
-                                                                style: TextStyle(
-                                                                    color: Colors
-                                                                            .green[
-                                                                        900],
-                                                                    fontSize:
-                                                                        16,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .bold),
-                                                              ),
-                                                            )
-                                                          ],
-                                                        ),
-                                                      ),
-                                                    ],
                                                   ),
-                                                ),
-                                              )
-                                            ],
+                                                )
+                                              ],
+                                            ),
                                           );
                                   },
                                 );

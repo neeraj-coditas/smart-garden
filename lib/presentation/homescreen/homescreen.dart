@@ -139,60 +139,62 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ),
                         ),
-                        Positioned(
-                          left: 60,
-                          top: 160,
-                          child: GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const GardenScreen(),
-                                ),
-                              );
-                            },
-                            child: Container(
-                              height: 80,
-                              width: 275,
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(12)),
-                              child: Row(
-                                children: [
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      const Padding(
-                                        padding:
-                                            EdgeInsets.only(top: 20, left: 16),
-                                        child: Text(
-                                          "Charlie's Garden",
-                                          style: TextStyle(
-                                              color: Colors.black,
-                                              fontSize: 21,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 4, left: 16, bottom: 6),
-                                        child: Text(
-                                          'ID: 144295024',
-                                          style: TextStyle(
-                                              color: Colors.grey[600],
-                                              fontSize: 14),
-                                        ),
-                                      )
-                                    ],
+                        Align(
+                          alignment: Alignment.bottomCenter,
+                          child: Positioned(
+                            top: 160,
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const GardenScreen(),
                                   ),
-                                  const Padding(
-                                    padding: EdgeInsets.only(left: 50),
-                                    child: Image(
-                                        image: AssetImage(
-                                            'assets/next_arrow.png')),
-                                  )
-                                ],
+                                );
+                              },
+                              child: Container(
+                                height: 80,
+                                width: 275,
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(12)),
+                                child: Row(
+                                  children: [
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        const Padding(
+                                          padding: EdgeInsets.only(
+                                              top: 20, left: 16),
+                                          child: Text(
+                                            "Charlie's Garden",
+                                            style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 21,
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 4, left: 16, bottom: 6),
+                                          child: Text(
+                                            'ID: 144295024',
+                                            style: TextStyle(
+                                                color: Colors.grey[600],
+                                                fontSize: 14),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                    const Padding(
+                                      padding: EdgeInsets.only(left: 50),
+                                      child: Image(
+                                          image: AssetImage(
+                                              'assets/next_arrow.png')),
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
                           ),
