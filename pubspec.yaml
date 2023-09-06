@@ -70,6 +70,7 @@ flutter:
     - assets/cart.png
     - assets/cart_2.png
     - assets/fav.png
+    - assets/bottom_sheet_minimize.png
 
   fonts:
     - family: "ProximaNovaAlt"
