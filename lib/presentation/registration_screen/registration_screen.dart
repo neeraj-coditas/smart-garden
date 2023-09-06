@@ -7,35 +7,36 @@ class RegistrationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Container(
         width: double.infinity,
-        color: Color.fromARGB(255, 12, 147, 89),
+        color: const Color.fromARGB(255, 12, 147, 89),
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 24),
+          padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 120,
               ),
-              Text(
+              const Text(
                 'Register on Aepod',
                 style: TextStyle(
                     color: Colors.white,
                     fontFamily: 'NoeDisplay',
                     fontSize: 32),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
-              Text(
+              const Text(
                 'Create an Aepod Account, We cant wait to have you. ',
                 style: TextStyle(color: Colors.white, fontSize: 18),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 48,
               ),
-              TextField(
+              const TextField(
                 cursorColor: Colors.white,
                 decoration: InputDecoration(
                     enabledBorder: UnderlineInputBorder(
@@ -49,10 +50,10 @@ class RegistrationScreen extends StatelessWidget {
                     hintText: 'Email Address',
                     hintStyle: TextStyle(color: Colors.white, fontSize: 18)),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 32,
               ),
-              TextField(
+              const TextField(
                 cursorColor: Colors.white,
                 decoration: InputDecoration(
                     enabledBorder: UnderlineInputBorder(
@@ -67,23 +68,23 @@ class RegistrationScreen extends StatelessWidget {
                     hintStyle: TextStyle(color: Colors.white, fontSize: 18),
                     suffixIcon: Image(image: AssetImage('assets/eye.png'))),
               ),
-              SizedBox(height: 48),
-              Text(
+              const SizedBox(height: 48),
+              const Text(
                 'Or Register using social media',
                 style: TextStyle(fontSize: 18, color: Colors.white),
               ),
-              SizedBox(height: 24),
+              const SizedBox(height: 24),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(
+                      borderRadius: const BorderRadius.all(
                         Radius.circular(16),
                       ),
                       border: Border.all(width: 2, color: Colors.white),
                     ),
-                    child: Padding(
+                    child: const Padding(
                       padding:
                           EdgeInsets.symmetric(vertical: 16, horizontal: 28),
                       child: Row(
@@ -105,12 +106,12 @@ class RegistrationScreen extends StatelessWidget {
                   ),
                   Container(
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(
+                      borderRadius: const BorderRadius.all(
                         Radius.circular(16),
                       ),
                       border: Border.all(width: 2, color: Colors.white),
                     ),
-                    child: Padding(
+                    child: const Padding(
                       padding:
                           EdgeInsets.symmetric(vertical: 16, horizontal: 28),
                       child: Row(
@@ -144,20 +145,21 @@ class RegistrationScreen extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: ((context) => PersonalizationScreen()),
+                              builder: ((context) =>
+                                  const PersonalizationScreen()),
                             ),
                           );
                         },
                         child: Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.all(
                               Radius.circular(4),
                             ),
                           ),
                           width: double.infinity,
-                          child: Padding(
-                            padding: const EdgeInsets.all(16.0),
+                          child: const Padding(
+                            padding: EdgeInsets.all(16.0),
                             child: Text(
                               'Register',
                               style: TextStyle(
@@ -169,17 +171,18 @@ class RegistrationScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: 32),
+                      const SizedBox(height: 32),
                       GestureDetector(
                         onTap: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: ((context) => PersonalizationScreen()),
+                              builder: ((context) =>
+                                  const PersonalizationScreen()),
                             ),
                           );
                         },
-                        child: Text(
+                        child: const Text(
                           'Already have an account? Login',
                           style: TextStyle(
                               color: Colors.white,
@@ -187,7 +190,7 @@ class RegistrationScreen extends StatelessWidget {
                               fontWeight: FontWeight.bold),
                         ),
                       ),
-                      SizedBox(height: 64)
+                      const SizedBox(height: 64)
                     ],
                   ),
                 ),
